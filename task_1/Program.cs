@@ -7,11 +7,12 @@ string GetNewString()
 
 string[] FillStringArray()
 {
+    Console.WriteLine("Введите строку и нажмите Enter. Для завершения введите ПРОБЕЛ и нажмите Enter");
     string[] arr = new string [0];
     string b = "a";
     for (int i = 0; (b = GetNewString()) != " "; i++)
     {
-        Array.Resize(ref arr, i);
+        Array.Resize(ref arr, i + 1);
         arr[i] = b;
     }
     return arr;
@@ -44,6 +45,6 @@ void PrintArray(string[] arr)
 
 string[] a = FillStringArray();
 PrintArray(a);
+Console.WriteLine();
 string[] b = FilterArray(a);
 PrintArray(b);
-

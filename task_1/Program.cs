@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
+﻿
 string GetNewString()
 {
     string a = Convert.ToString(Console.ReadLine());
@@ -33,6 +31,15 @@ string[] FilterArray(string[] a)
         }
     }
     return b;
+}
+
+void PrintArray(string[] arr)
+{
+    Console.Write($"{arr[0]}");
+    for (int i = 1; i < arr.Length; i++)
+    {
+        Console.Write($", {arr[i]}");
+    }
 }
 
 string[] a = FillStringArray();

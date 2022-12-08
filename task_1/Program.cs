@@ -19,9 +19,24 @@ string[] FillStringArray()
     return arr;
 }
 
-string a = FillStringArray;
+string[] FilterArray(string[] a)
+{
+    string[] b = new string[0];
+    int j = 0;
+    for (int i = 0; i < a.Length; i++)
+    {
+        if (a[i].Length <= 3)
+        {
+            Array.Resize(ref b, j + 1);
+            b[j] = a[i];
+            j +=1;
+        }
+    }
+    return b;
+}
 
+string[] a = FillStringArray();
 PrintArray(a);
-FilterArray(a);
-PrintArray(a);
+string[] b = FilterArray(a);
+PrintArray(b);
 
